@@ -29,11 +29,11 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'user.User'
 
-REST_FRAMEWORK = {
-  'DEFAULT_AUTHENTICATION_CLASSES': (
-    'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-  ),
-}
+# REST_FRAMEWORK = {
+#   'DEFAULT_AUTHENTICATION_CLASSES': (
+#     'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+#   ),
+# }
 
 
 
