@@ -15,10 +15,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
-# Application definition
+ALLOWED_HOSTS = ['localhost', '*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,6 +26,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
 ]
+
+AUTH_USER_MODEL = 'user.User'
+
+REST_FRAMEWORK = {
+  'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+  ),
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
