@@ -46,4 +46,9 @@ This API allows users to create, view, and update user accounts.
         <td>/api/retrieve_update_user/</td>
         <td>For retrieving a user and updating a user</td>
     </tr>
+    <tr>
+       <td>ws endpoint</td>
+       <td>127.0.0.1:8000/ws/<room_name></td>
+       <td>Socket endpoint</td>
+    </tr>
 </table>
