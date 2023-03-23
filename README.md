@@ -8,9 +8,12 @@ of the application.
 <br>
 <h1>How to Use This repo </h1>
 fork the repo and run <br>
-<code>pip install -r requirements.txt </code> <br>
+
+<code>pip install -r requirements.txt </code> <br> 
+
 To install the necessary dependencies <br>
 then go ahead and run the django development server with the command below<br>
+
 <code>python3 manage.py runserver </code> <br>
 
 This API allows users to create, view, and update user accounts.
