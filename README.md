@@ -103,7 +103,7 @@ Request body:
   
   <br>
 Response body:
-
+    
 {
     "id": 1,
     "first_name": "John",
