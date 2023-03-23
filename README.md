@@ -5,7 +5,10 @@ friendly and connects people together.
 
 <strong>tic</strong> is hosted in two repositories, this repository is based on the backend api implementation <br>
 of the application. 
-
+<br>
+<h1>How to Use This repo </h1>
+fork the repo and run <code>python3 manage.py runserver </code> <br>
+To start Django development Server <br>
 
 This API allows users to create, view, and update user accounts.
 
@@ -18,23 +21,23 @@ Endpoint:
 POST
 
 Request body:
-
-{
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "johndoe@example.com",
-    "password": "password"
-}
+<br>
+{ <br>
+    "first_name": "John", <br>
+    "last_name": "Doe", <br>
+    "email": "johndoe@example.com",<br>
+    "password": "password"<br>
+}<br>
 
 <br>
 Response body:
-
-{
-    "id": 1,
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "johndoe@example.com"
-}
+ <br>
+{ <br>
+    "id": 1, <br>
+    "first_name": "John", <br>
+    "last_name": "Doe", <br>
+    "email": "johndoe@example.com" <br>
+}<br>
 <br>
   
   
@@ -46,21 +49,21 @@ Endpoint:
 GET
 
 Response body:
-
-[
-    {
-        "id": 1,
-        "first_name": "John",
-        "last_name": "Doe",
-        "email": "johndoe@example.com"
-    },
-    {
-        "id": 2,
-        "first_name": "Jane",
-        "last_name": "Doe",
-        "email": "janedoe@example.com"
-    }
-]
+<br>
+[<br>
+    {<br>
+        "id": 1,<br>
+        "first_name": "John",<br>
+        "last_name": "Doe",<br>
+        "email": "johndoe@example.com"<br>
+    },<br>
+    {<br>
+        "id": 2,<br>
+        "first_name": "Jane",<br>
+        "last_name": "Doe",<br>
+        "email": "janedoe@example.com"<br>
+    }<br>
+]<br>
   <br>
  <h1>Authenticate User</h1> <br>
 Endpoint:  <br>
@@ -69,20 +72,20 @@ Endpoint:  <br>
   <strong>Method:</strong> 
 POST
 
-Request body:
-
-{
-    "email": "johndoe@example.com",
-    "password": "password"
-}
+Request body:<br>
+<br>
+{<br>
+    "email": "johndoe@example.com",<br>
+    "password": "password"<br>
+}<br>
   
   <br>
 Response body:
 
-{
-    "name": "John Doe",
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImpvaG5kb2VAdGVzdC5jb20iLCJleHAiOjE1NzUyMzI3MzJ9.0H1_Q-NgYjB5q3xIjnX9S5E5XyG-f8Kj-L4h4t4pfZ8"
-}
+{<br>
+    "name": "John Doe",<br>
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImpvaG5kb2VAdGVzdC5jb20iLCJleHAiOjE1NzUyMzI3MzJ9.0H1_Q-NgYjB5q3xIjnX9S5E5XyG-f8Kj-L4h4t4pfZ8"<br>
+}<br>
   
 <br>
 Retrieve Update User
@@ -92,21 +95,21 @@ Endpoint:
 Method: 
 PUT, GET
 
-Request body:
+Request body:<br>
 
-{
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "johndoe@example.com",
-    "password": "password"
+{<br>
+    "first_name": "John",<br>
+    "last_name": "Doe",<br>
+    "email": "johndoe@example.com",<br>
+    "password": "password"<br>
 }
   
   <br>
 Response body:
     
-{
-    "id": 1,
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "johndoe@example.com"
-}
+{<br>
+    "id": 1,<br>
+    "first_name": "John",<br>
+    "last_name": "Doe",<br>
+    "email": "johndoe@example.com"<br>
+}<br>
