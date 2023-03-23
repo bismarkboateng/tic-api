@@ -35,6 +35,16 @@ This API allows users to create, view, and update user accounts.
        <td>/api/list_users/</td>
        <td>List all available users</td>
     </tr>
+    <tr>
+        <td>POST</td>
+        <td>/api/authenticate_user/</td>
+        <td>authenticating users</td
+    </tr>
+    <tr>
+        <td>GET n PUT</td>
+        <td>/api/retrieve_update_user/</td>
+        <td>For retrieving a user and updating a user</td>
+    </tr>
 </table>
 
 
