@@ -18,6 +18,28 @@ then go ahead and run  django development server with the command below<br>
 
 This API allows users to create, view, and update user accounts.
 
+
+<table>
+    <tr>
+       <th> Method </th>
+       <th> Endpoint </th>
+       <th> Description </th>
+    </tr>
+    <tr>
+       <td>POST</td>
+       <td>/api/create_user/</td>
+       <td>Endpoint to create a user</td>
+    </tr>
+    <tr>
+       <td>GET</td>
+       <td>/api/list_users/</td>
+       <td>List all available users</td>
+    </tr>
+</table>
+
+
+
+
 <h1>Endpoints</h1> <br>
 Create User <br>
 Endpoint: 
