@@ -3,14 +3,9 @@ from .models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
-    last_seen = serializers.ReadOnlyField()
+    date_joined = serializers.ReadOnlyField()
 
     class Meta:
-        model = User
-        fields = [
-            "id", "email",
-            "first_name", "last_name",
-            "password", "last_seen", "is_active",
-        ]
-
-        extra_kwargs = {"password" : {"write_only": True}}
+        model = User 
+        fields = ["id", "email", "first_name", "last_name", "password", "date_joined"]
+        extra_kwargs = {"password": {"write_only": True}}

@@ -1,9 +1,9 @@
-from django.urls import path 
-from .views import CreateUserAPIView, AuthenticateUser,UserRetrieveUpdateAPIView
-
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path("create/", CreateUserAPIView.as_view(), name="create_user"),
-    path("authenticate/token/", AuthenticateUser.as_view(), name="authenticate_get_token"),
-    path("update/", UserRetrieveUpdateAPIView.as_view(), name="update_retrieve")
+    path("create/", views.CreateUserAPIView.as_view(), name="create_user"),
+    path("authenticate/", views.authenticate_user, name="authenticate"),
+    path("all/", views.ListUserView.as_view(), name="list-users"),
+    path("update/", views.UserRetrieveUpdateAPIView.as_view(), name="retrieve-update")
 ]
