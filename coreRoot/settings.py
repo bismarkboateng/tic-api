@@ -26,8 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
+    'chat.apps.ChatConfig',
 
     'rest_framework',
+    'channels',
     
 ]
 
@@ -48,6 +50,13 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
+
+ASGI_APPLICATION = "chat.routing.application" #routing.py will handle the ASGI
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': "channels.layers.InMemoryChannelLayer"
+        }
+}
 
 
 MIDDLEWARE = [
