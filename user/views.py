@@ -7,7 +7,6 @@ from rest_framework import status
 from .models import User
 import jwt 
 from django.conf import settings
-# from rest_framework.viewsets import ModelViewSet
 from rest_framework_jwt.settings import api_settings
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
 from rest_framework.generics import RetrieveUpdateAPIView
@@ -31,39 +30,6 @@ class ListUserView(APIView):
         user = User.objects.all()
         serializer = UserSerializer(user, many=True)
         return Response(serializer.data)
-
-# class AuthenticateUser(APIView):
-#     permission_classes = (AllowAny,)
-
-
-#     def post(self, request):
-#         try:
-#             email = request.data["email"]
-#             password = request.data["password"]
-
-#             user = User.objects.get(email=email, password=password)
-
-#             if user: 
-#                 try:
-#                     payload = jwt.payload_handler(user)
-#                     token = jwt.encode(payload, settings.SECRET_KEY)
-#                     user_details = {}
-#                     user_details["name"] = "%s %s" % (user.first_nme, user.last_name)
-#                     user_details["token"] = token 
-#                     user.logged_in.send(sender=user.__class__, request=request, user=user)
-
-#                     return Response(user_details, status=status.HTTP_200_OK)
-                
-#                 except Exception as e:
-#                     raise e 
-#             else:
-#                 res = {
-#                     "error":"cannot authenticate with the given credentials"
-#                 }
-#                 return Response(res, status=status.HTTP_403_FORBIDDEN)
-#         except KeyError:
-#             res = {"error" : "please provide an email and a password!"}
-#             return Response(res)
 
 
 @api_view(['POST'])
